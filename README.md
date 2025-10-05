@@ -1,2 +1,47 @@
-# stm32-reusable-headers
-Reusable C header files for embedded systems and general C programming.  Bit manipulation macros (SET_THE_BIT, CLEAR_THE_BIT, TOGGLE_THE_BIT, READ_THE_BIT).  Platform-independent type aliases (u8, s16, f32, etc.).  Tested in STM32CubeIDE and Code::Blocks. Designed to be lightweight, portable, and beginner-friendly.
+# Embedded C Headers
+
+This repository contains small, reusable C header files that make low-level programming more readable and consistent.
+
+## Features
+- **Bit Manipulation Macros**  
+  - `SET_THE_BIT(reg, bit)`  
+  - `CLEAR_THE_BIT(reg, bit)`  
+  - `TOGGLE_THE_BIT(reg, bit)`  
+  - `READ_THE_BIT(reg, bit)`  
+
+- **Platform-Independent Type Aliases**  
+  - Integer types: `u8`, `s16`, `u32`, etc.  
+  - Floating-point types: `f32`, `f64`
+
+## Structure
+embedded-c-headers/
+
+│
+
+├── inc/
+
+│   ├── w1_t1.h
+
+│   └── w1_t2.h
+
+│
+
+├── src/
+
+│   └── main.c
+
+│
+
+└── README.md
+
+
+## Usage
+Include the headers in your project and use them directly:
+```c
+#include "w1_t1.h"
+//bit manipulation
+#include "w1_t2.h"
+//type aliases
+
+u8 counter = 0;
+SET_BIT(counter, 2);
